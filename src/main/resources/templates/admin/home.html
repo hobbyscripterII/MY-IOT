@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{fragments/layout-admin}" layout:fragment="body">
-	<body>
-	    <section>
-			<div id="home-wrap">
-			    <!-- 현재 시간 표출 -->
-			    <p id="time"></p>
-			</div>
-	    </section>
-	</body>
+<body>
+    <section>
+		<div id="home-wrap">
+		    <!-- 현재 시간 표출 -->
+		    <p id="time"></p>
+		</div>
+		
+		<div id="control-wrap">
+			<button id="bluetooth-speaker" onclick="bluetoothSpeakerControl()">BLUETOOTH SPEAKER</button>
+			<button id="lighting" onclick="lightingControl()">LIGHTING</button>
+		</div>
+    </section>
+</body>
+
+<script th:src="@{/js/mqtt.js}"></script>
 </html>
