@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" th:fragment="header">
+	<header>
+	    <span>
+			<a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/admin/home}">
+	            <span>🏠</span>
+	            <span>HOME CONTROL</span>
+	        </a>
+	    </span>
+		
+		<button class="btn small" onclick="logout()">로그아웃</button>
+	</header>
+	
+	<script>
+		function logout() {
+			location.href='/logout';
+		}
+	</script>
+</html>
