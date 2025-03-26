@@ -1,29 +1,36 @@
 $(document).ready(() => {
 	// mqtt 통신 후 ON/OFF 확인
 	
-	const mqtt_test		   = $('#mqtt_test');
-	const bluetoothSpeaker = $('#bluetooth-speaker');
-	const lighting         = $('#lighting');
+	// const mqtt_test		   = $('#mqtt_test');
+	// const bluetoothSpeaker = $('#bluetooth-speaker');
+	// const lighting         = $('#lighting');
 });
 
 function mqttTestControl() {
-	// sweetAlert('알림', 'MQTT 통신 테스트 이벤트입니다.', 'info');
-	
 	const brokerUrl = 'ws://ljy.myddns.me:8081';
 	const topic		= '/mqtt/mqtt_test';
-	
-	const client = mqtt.connect(brokerUrl);
+	const client 	= mqtt.connect(brokerUrl);
 	
 	client.on('connect', function() {
-		console.log('MQTT 연결에 성공했습니다.');
-		
 		client.subscribe(topic, function(error) {
 			if(error) {
 				console.log('[MQTT ERROR MESSAGE] ', error);
-			} else {
-				sweetAlert('알림', topic, 'info');
 			}
 		});
+	});
+	
+	client.on('message', function(topic, message) {
+		sweetAlertHtml('성공', `토픽 : ${topic}<br>메세지 : ${message}`, 'success');
+	});
+	
+	const message = '테스트 메세지';
+
+	client.publish(topic, message, function(e) {
+		if(e) {
+			console.log('[MQTT ERROR MESSAGE] ', error);
+		} else {
+			sweetAlertHtml('성공', `토픽 : ${topic}<br>메세지 : ${message}`, 'success');
+		}
 	});
 }
 
