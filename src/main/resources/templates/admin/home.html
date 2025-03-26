@@ -8,11 +8,13 @@
 		</div>
 		
 		<div id="control-wrap">
+			<button id="tqtt_test" onclick="mqttTestControl()">MQTT TEST</button>
 			<button id="bluetooth-speaker" onclick="bluetoothSpeakerControl()">BLUETOOTH SPEAKER</button>
 			<button id="lighting" onclick="lightingControl()">LIGHTING</button>
 		</div>
     </section>
 </body>
 
+<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
 <script th:src="@{/js/mqtt.js}"></script>
 </html>
