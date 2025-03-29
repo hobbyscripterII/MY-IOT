@@ -7,41 +7,27 @@ $(document).ready(() => {
 });
 
 function mqttTestControl() {
-	const brokerUrl = 'ws://ljy.myddns.me:8081';
+	const brokerUrl = 'ws://192.168.0.48:8081';
 	const topic		= '/mqtt/mqtt_test';
-	const client 	= mqtt.connect(brokerUrl);
-	
-	client.on('connect', function() {
-		// sub
-		client.subscribe(topic, function(e) {
-			if(e) {
-				console.log('mqtt connect fail..');
-				console.log('detail ⇒ ', e);
-			} else {
-				console.log('mqtt connect success..');
-				console.log('topic  ⇒ ', topic);
-			}
-		});
+	const client    = mqtt.connect(brokerUrl);
+
+	client.on('connect', () => {
+		console.log(`TOPIC CONNECT SUCCESS..`);
 		
-		client.publish(topic, 'test', function(e) {
+		client.subscribe(topic, (e) => {
 			if(e) {
-				console.log('mqtt publish fail..');
-				console.log('detail ⇒ ', e);
+				console.log(`TOPIC SUBSCRIPTION FAIL..`);
+				console.log(`⇒ ${e}`);
 			} else {
-				console.log('mqtt publish success..');
+				console.log(`TOPIC SUBSCRIPTION SUCCESS..`);
+				console.log(`⇒ ${topic}`);
 			}
 		});
 	});
-	
-	client.on('message', function(topic, message) {
-		const messageToString = message.toString();
-		console.log(`topic = ${topic} message = ${messageToString}`);
-		
-		sweetAlertHtml('성공', `토픽 : ${topic}<br>메세지 : ${messageToString}`, 'success');
-	});
-	
-	client.on('error', function(e) {
-		sweetAlertHtml('실패', `에러 메세지 : ${e}`, 'error');
+
+	client.on('message', (topic, message) => {
+		console.log(`MQTT CONNECTION SUCCESS..`);
+		console.log(`⇒ ${message}`);
 	});
 }
 
