@@ -1,0 +1,47 @@
+@media (max-width:768px) {
+	.profile-wrap {
+		display: none;
+	}
+	
+	
+	header {
+		border-bottom: 0px;
+		display: flex;
+		align-items: center;
+	}
+	
+	header span {
+	    font-size: 20px;
+	}
+	
+	section {
+		flex: auto;
+	}
+	
+	nav {
+		width: 100%;
+		border-right: 0px;
+	}
+	
+	.navbar-wrap {
+		padding: 10px;
+		border-bottom: 1px solid #dbdbdb;
+	}
+	
+	.sub-nav {
+	    padding: 5px 20px;
+	}
+	
+	nav ul li {
+	    margin-bottom: 0px;
+	}
+	
+	#home-wrap {
+		display: none;
+	}
+	
+	#control-wrap button {
+	    font-size: 20px;
+		min-width: 100%;
+	}
+}

@@ -4,16 +4,25 @@
     <section>
 		<div id="home-wrap">
 		    <!-- 현재 시간 표출 -->
-		    <p id="time"></p>
+		    <p id="menu-name">MQTT 테스트</p>
 		</div>
 		
-		<div id="control-wrap">
-			<button id="bluetooth-speaker" onclick="bluetoothSpeakerControl()">BLUETOOTH SPEAKER</button>
-			<button id="lighting" onclick="lightingControl()">LIGHTING</button>
+		<div class="table-wrap">
+			<table>
+				<thead>
+					<tr style="cursor: default">
+						<th>메세지 내용</th>
+						<th>수신 시간</th>
+						<th>UNIX 시간</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
 		</div>
     </section>
 </body>
 
 <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
-<script th:src="@{/js/admin_home.js}"></script>
+<script th:src="@{/js/admin_mqtt_test.js}"></script>
 </html>
