@@ -44,4 +44,8 @@
 	    font-size: 20px;
 		min-width: 100%;
 	}
+	
+	.mobile-hide {
+		display: none;
+	}
 }

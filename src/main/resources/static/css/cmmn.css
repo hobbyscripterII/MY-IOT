@@ -65,6 +65,8 @@ tr {
 table th, table td {
 	padding: .625em;
 	text-align: center;
+	font-size: 14px;
+	border: 1px solid #dbdbdb;
 }
 
 table th {
@@ -72,5 +74,7 @@ table th {
 }
 
 .table-wrap {
-	/* padding: 0 10px; */	
+	/* padding: 0 10px; */
+	max-height: 87vh;
+	overflow-y: auto;
 }

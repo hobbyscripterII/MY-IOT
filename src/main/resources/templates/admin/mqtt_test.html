@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{fragments/layout-admin}" layout:fragment="body">
+<style>
+	th:first-child {width: 60%;}
+	th:nth-child(2), td:nth-child(2) {width: 20%;}
+	th:nth-child(3), td:nth-child(3) {width: 20%;}
+</style>
 <body>
     <section>
 		<div id="home-wrap">
@@ -13,7 +18,7 @@
 					<tr style="cursor: default">
 						<th>메세지 내용</th>
 						<th>수신 시간</th>
-						<th>UNIX 시간</th>
+						<th class="mobile-hide">UNIX 시간</th>
 					</tr>
 				</thead>
 				<tbody>
