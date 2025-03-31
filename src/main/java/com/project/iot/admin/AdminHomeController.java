@@ -16,4 +16,9 @@ public class AdminHomeController {
 	public String mqttTest() {
 		return "admin/mqtt_test";
 	}
+	
+	@GetMapping("/led_test")
+	public String ledTest() {
+		return "admin/led_test";
+	}
 }

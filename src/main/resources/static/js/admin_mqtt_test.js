@@ -1,8 +1,6 @@
 $(document).ready(() => {
-	const brokerUrl = 'ws://192.168.0.48:8081';
-	// const topic		= '/mqtt/mqtt_test';
-	const topic		= '/mqtt/led/blink';
-	const client    = mqtt.connect(brokerUrl);
+	const topic  = '/mqtt/mqtt_test';
+	const client = mqtt.connect('ws://ljy.myddns.me:8081');
 
 	client.on('connect', () => {
 		console.log(`TOPIC CONNECT SUCCESS..`);
@@ -33,6 +31,6 @@ $(document).ready(() => {
 						<td class="mobile-hide">${jsonEpoch}</td>
 					</tr>`;
 					
-		$('table tbody').append(el);	
+		$('table tbody').append(el);
 	});
 });

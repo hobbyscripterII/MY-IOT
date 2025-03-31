@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{fragments/layout-admin}" layout:fragment="body">
+<body>
+    <section>
+		<div id="home-wrap">
+		    <!-- 현재 시간 표출 -->
+		    <p id="time"></p>
+		</div>
+		
+		<div id="control-wrap">
+			<button id="led" onclick="ledOn()">LED ON</button>
+			<button id="led" onclick="ledOff()">LED OFF</button>
+			<button id="led" onclick="ledBlink()">LED BLINK</button>
+		</div>
+    </section>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/mqtt@4.3.7/dist/mqtt.min.js"></script>
+<script th:src="@{/js/admin_led_test.js}"></script>
+</html>
