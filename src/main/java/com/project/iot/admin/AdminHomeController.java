@@ -24,7 +24,7 @@ public class AdminHomeController {
 	
 	@GetMapping("/ip_camera_test")
 	public String ipCameraTest() {
-		return "/admin/ip_camera_test";
+		return "admin/ip_camera_test";
 	}
 	
 	/*
