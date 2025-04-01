@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{fragments/layout-admin}" layout:fragment="body">
 <style>
-	th:first-child {width: 60%;}
-	th:nth-child(2), td:nth-child(2) {width: 20%;}
-	th:nth-child(3), td:nth-child(3) {width: 20%;}
+	th:first-child {width: 30%;}
+	th:nth-child(2), td:nth-child(2) {width: 30%;}
+	th:nth-child(3), td:nth-child(3) {width: 30%;}
 </style>
 <body>
     <section>
 		<div id="home-wrap">
 		    <!-- 현재 시간 표출 -->
-		    <p id="menu-name">MQTT 통신 테스트</p>
+		    <p id="menu-name">기본 센서 테스트</p>
 		</div>
 		
 		<div class="table-wrap">
 			<table>
 				<thead>
 					<tr style="cursor: default">
-						<th>메세지 내용</th>
-						<th>수신 시간</th>
-						<th class="mobile-hide">UNIX 시간</th>
+						<th>내부 온도</th>
+						<th>배터리 전압</th>
+						<th>WiFi 신호 강도</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -29,5 +29,5 @@
 </body>
 
 <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
-<script th:src="@{/js/admin_mqtt_test.js}"></script>
+<script th:src="@{/js/admin_default_sensor_test.js}"></script>
 </html>

@@ -1,52 +1,46 @@
 let client;
-let currentTopic = null;
+let currentTopic    = null;
+const message       = 'MESSAGE';
+const brokerUrl     = 'ws://ljy.myddns.me:8081';
+const ledOnTopic    = '/mqtt/led/on';
+const ledOffTopic   = '/mqtt/led/off';
+const ledBlinkTopic = '/mqtt/led/blink';
 
 $(document).ready(() => {
-	client = mqtt.connect('ws://ljy.myddns.me:8081');
+	client = mqtt.connect(brokerUrl);
 	
-	// 중복 방지
+	client.on('connect', () => {
+		console.log('mqtt 연결 성공');
+	});
+	
 	client.on('message', (topic, message) => {
-		console.log(`MQTT CONNECTION SUCCESS..`);
-		console.log(`⇒ ${topic} ${message}`);
+		const payload = message.toString();
+		
+		console.log(`topic = ${topic} payload = ${payload}`);
 	});
 });
 
 function ledOn() {
-	// sweetAlert('알림', 'LED를 켭니다.', 'info');
-	ledControl('/mqtt/led/on');
+	client.publish(ledOnTopic, 'ON');
+	// unSubscribe(ledOnTopic);
 }
 
 function ledOff() {
-	// sweetAlert('알림', 'LED를 끕니다.', 'info');
-	ledControl('/mqtt/led/off');
+	client.publish(ledOffTopic, 'OFF');
+	// unSubscribe(ledOffTopic);
 }
 
 function ledBlink() {
-	// sweetAlert('알림', 'LED를 깜빡거립니다.', 'info');
-	ledControl('/mqtt/led/blink');
+	client.publish(ledBlinkTopic, 'BLINK');
+	// unSubscribe(ledBlinkTopic);
 }
 
-function ledControl(topic) {
-	// console.log(`topic = ${topic}`);
-	
-	if(client.connected) {
-		if(currentTopic && currentTopic !== topic) {
-			client.unsubscribe(currentTopic, () => {
-				console.log('TOPIC UNSUBSCRIBE SUCCESS..');
-				// console.log(`⇒ ${currentTopic}`);
-			});
-		}
+/*
+function unSubscribe(topic) {
+	client.subscribe(topic, () => {
+		console.log(`새로운 토픽 구독 성공 = ${topic}`);
 		
-		client.subscribe(topic, (e) => {
-			if(e) {
-				console.log(`TOPIC SUBSCRIPTION FAIL..`);
-				// console.log(`⇒ ${e}`);
-			} else {
-				console.log(`TOPIC SUBSCRIPTION SUCCESS..`);
-				// console.log(`⇒ ${topic}`);
-			}
-		});
-		
-		client.publish(topic, 'MESSAGE');
-	}
+		currentTopic = topic;
+	});
 }
+*/

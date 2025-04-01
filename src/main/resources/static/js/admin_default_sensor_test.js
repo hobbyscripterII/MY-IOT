@@ -1,5 +1,5 @@
 $(document).ready(() => {
-	const topic   = '/mqtt/mqtt_test';
+	const topic   = '/mqtt/default_sensor_test';
 	const client  = mqtt.connect('ws://ljy.myddns.me:8081');
 	const message = 'MESSAGE';
 
@@ -18,17 +18,15 @@ $(document).ready(() => {
 	client.publish(topic, message);
 
 	client.on('message', (topic, message) => {
-		console.log(`topic = ${topic} message = ${message}`);
-		
-		const json          = JSON.parse(message);
-		const jsonMessage   = json.message;
-		const jsonTimestamp = json.timestamp;
-		const jsonEpoch     = json.epoch;
+		const json        = JSON.parse(message);
+		const jsonTemp    = json.temp;
+		const jsonBattery = json.battery;
+		const jsonRssi    = json.rssi;
 		
 		const el = `<tr>
-						<td>${jsonMessage}</td>
-						<td>${jsonTimestamp}</td>
-						<td class="mobile-hide">${jsonEpoch}</td>
+						<td>${jsonTemp}</td>
+						<td>${jsonBattery}</td>
+						<td class="mobile-hide">${jsonRssi}</td>
 					</tr>`;
 					
 		$('table tbody').append(el);
