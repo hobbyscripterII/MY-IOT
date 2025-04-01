@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{fragments/layout-admin}" layout:fragment="body">
 <style>
-	th:first-child {width: 30%;}
-	th:nth-child(2), td:nth-child(2) {width: 30%;}
-	th:nth-child(3), td:nth-child(3) {width: 30%;}
 </style>
 <body>
     <section>
 		<div id="home-wrap">
 		    <!-- 현재 시간 표출 -->
-		    <p id="menu-name">기본 센서 테스트</p>
+		    <p id="menu-name">IP 카메라 테스트</p>
 		</div>
 		
+		<!--
 		<div class="data-result-info-box">
 			<span>마지막 업데이트 시간 : </span>
 			<span id="response-time"></span>
@@ -36,9 +34,10 @@
 				<p id="rssi">0</p>
 			</div>
 		</div>		
+		-->
     </section>
 </body>
 
 <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
-<script th:src="@{/js/admin_default_sensor_test.js}"></script>
+<script th:src="@{/js/admin_ip_camera_test.js}"></script>
 </html>

@@ -2,7 +2,8 @@ $(document).ready(() => {
 	const topic   = '/mqtt/default_sensor_test';
 	const client  = mqtt.connect('ws://ljy.myddns.me:8081');
 	const message = 'MESSAGE';
-
+	
+	/*
 	client.on('connect', () => {
 		console.log('mqtt 연결 성공');
 		
@@ -39,4 +40,5 @@ $(document).ready(() => {
 		rssiEl.text(rssi);
 		heapMemoryEl.text(heapMemory);
 	});
+	*/
 });

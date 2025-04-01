@@ -9,11 +9,17 @@
 	    </div>
 
 	    <div class="line"></div>
-
+		
+		<ul class="toggle-wrap">
+			<!-- <p>토글 비활성화</p> -->
+			<img id ="toggle" th:src="@{/img/img-btn-toggle-1.png}">
+		</ul>
+		
 	    <ul class="navbar-wrap">
-			<li class="main-nav"><img src="https://img.icons8.com/?size=20&id=88608&format=png"><span>MEMU</span></li>
-			<li class="sub-nav"><a th:href="@{/admin/mqtt_test}">MQTT CONNECT TEST</a></li>
-			<li class="sub-nav"><a th:href="@{/admin/default_sensor_test}">DEFAULT SENSOR TEST</a></li>
+			<li class="main-nav"><img src="https://img.icons8.com/?size=20&id=88608&format=png"><span>메뉴</span></li>
+			<li class="sub-nav"><a th:href="@{/admin/mqtt_test}">MQTT 통신 테스트</a></li>
+			<li class="sub-nav"><a th:href="@{/admin/default_sensor_test}">기본 센서 테스트</a></li>
+			<li class="sub-nav"><a th:href="@{/admin/ip_camera_test}">IP 카메라 테스트</a></li>
 			<!-- <li class="sub-nav"><a th:href="@{/admin/led_test}">LED 테스트</a></li> -->
 			<!-- <li class="sub-nav"><a href="#">준비 중</a></li> -->
 	    </ul>

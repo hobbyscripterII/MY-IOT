@@ -164,4 +164,6 @@ section {
 .data-result-info-box span {
 	font-family: "Gulim", "굴림", sans-serif !important;
 	font-size: 13px;
+	word-break: break-all;
+    white-space: normal;
 }

@@ -22,6 +22,11 @@ public class AdminHomeController {
 		return "admin/default_sensor_test";
 	}
 	
+	@GetMapping("/ip_camera_test")
+	public String ipCameraTest() {
+		return "/admin/ip_camera_test";
+	}
+	
 	/*
 	@GetMapping("/led_test")
 	public String ledTest() {

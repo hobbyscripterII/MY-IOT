@@ -1,17 +1,28 @@
+@media (max-width:960px) {
+	.data-box {
+		padding: 30px 50px;
+		font-size: 20px;
+	}
+	
+	.data-result-info-box span {
+		font-size: 12px;
+	}
+}
+
 @media (max-width:768px) {
 	.profile-wrap {
 		display: none;
 	}
 	
-	
 	header {
 		border-bottom: 0px;
 		display: flex;
 		align-items: center;
+		padding: 10px;
 	}
 	
 	header span {
-	    font-size: 20px;
+	    font-size: 17px;
 	}
 	
 	section {
@@ -24,7 +35,7 @@
 	}
 	
 	.navbar-wrap {
-		padding: 10px;
+		padding: 0px 10px;
 		border-bottom: 1px solid #dbdbdb;
 	}
 	
@@ -47,5 +58,16 @@
 	
 	.mobile-hide {
 		display: none;
+	}
+	
+	.data-box {
+	    padding: 10px 10px;
+	    font-size: 15px;
+		border-radius: 5px;
+	}
+	
+	/* 토글 */
+	.toggle-wrap {
+		display: flex;
 	}
 }
