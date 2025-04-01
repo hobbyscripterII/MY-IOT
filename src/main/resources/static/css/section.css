@@ -134,3 +134,34 @@ section {
 	background-color: rgb(192, 192, 192);
     transition: background 0.3s ease, transform 0.1s ease;
 }
+
+/* 센서 표출 박스 */
+.data-result-info-box {
+	margin: 15px 0px;
+	padding-left: 20px;
+}
+
+.data-box-wrap {
+	display:flex;
+    justify-content: space-evenly;
+}
+
+.data-box {
+	background-color: #fff;
+	border-radius: 10px;
+	border: 1px solid #dbdbdb;
+	padding: 35px 65px;
+	font-size: 25px;
+	text-align: center;
+}
+
+.data-box-title {
+	font-weight: bold;
+	color: darkgray;
+	margin-bottom: 10px;
+}
+
+.data-result-info-box span {
+	font-family: "Gulim", "굴림", sans-serif !important;
+	font-size: 13px;
+}

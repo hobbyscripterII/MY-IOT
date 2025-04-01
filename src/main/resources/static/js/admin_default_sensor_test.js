@@ -18,17 +18,22 @@ $(document).ready(() => {
 	client.publish(topic, message);
 
 	client.on('message', (topic, message) => {
-		const json        = JSON.parse(message);
-		const jsonTemp    = json.temp;
-		const jsonBattery = json.battery;
-		const jsonRssi    = json.rssi;
+		const json           = JSON.parse(message);
+		const responseData   = message;
+		const jsonTimestamp  = json.timestamp;
+		const jsonVoltage    = json.voltage;
+		const jsonBattery    = json.battery;
+		const jsonRssi       = json.rssi;
+		const responseTimeEl = $('#response-time');
+		const responseDataEl = $('#response-data');
+		const voltageEl      = $('#voltage');
+		const batteryEl      = $('#battery');
+		const rssiEl         = $('#rssi');
 		
-		const el = `<tr>
-						<td>${jsonTemp}</td>
-						<td>${jsonBattery}</td>
-						<td class="mobile-hide">${jsonRssi}</td>
-					</tr>`;
-					
-		$('table tbody').append(el);
+		responseTimeEl.text(jsonTimestamp);
+		responseDataEl.text(responseData);
+		voltageEl.text(jsonVoltage);
+		batteryEl.text(jsonBattery);
+		rssiEl.text(jsonRssi);
 	});
 });

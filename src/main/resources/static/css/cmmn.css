@@ -73,7 +73,7 @@ table th {
 	text-transform: uppercase;
 }
 
-.table-wrap {
+.table-wrap, .data-box-wrap {
 	/* padding: 0 10px; */
 	max-height: 87vh;
 	overflow-y: auto;
