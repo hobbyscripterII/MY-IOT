@@ -28,7 +28,7 @@ select {
 
 .btn {
 	box-sizing: border-box;
-    background: #dbdbdb;
+    background: lightgray;
     color: #fff;
     font-size: 20px;
     padding: 12px;
@@ -38,7 +38,7 @@ select {
 }
 
 .btn:hover {
-	background-color: #333;
+	background-color: dimgray;
     transition: background 0.3s ease, transform 0.1s ease;
 }
 

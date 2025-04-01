@@ -44,11 +44,11 @@ section {
 
 .login-form-wrap h1 {
 	font-family: 'Freesentation-9Black';
-	font-size: 40px;
+	font-size: 35px;
 	color: #fff;
 	width: 100vw;
 	padding-bottom: 15px;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	text-shadow: 2px 2px 4px rgba(0, 0, 0.5, 0.5);
 }
 
 #login-form {
@@ -83,7 +83,7 @@ section {
 #login-form button {
 	box-sizing: border-box;
     width: 100%;
-    background: #b041ff;
+    background: lightgray;
     color: #fff;
     font-size: 20px;
     padding: 12px;
@@ -93,7 +93,7 @@ section {
 }
 
 #login-form button:hover {
-	background-color: #7f38ec;
+	background-color: darkgray;
     transition: background 0.3s ease, transform 0.1s ease;
 }
 
