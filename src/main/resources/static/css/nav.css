@@ -55,13 +55,21 @@ nav ul li {
 }
 
 .sub-nav:hover {
-	background-color: #dbdbdb;
-	border-left: 7px solid dimgray;
+	text-decoration: underline;
+	
+	/*
+	background-color: #9ACBD0;
+	border-left: 7px solid #006A71;
+	*/
 }
 
 .active {
-    background-color: #dbdbdb;
-    border-left: 7px solid dimgray;
+	text-decoration: underline;
+
+	/*
+	background-color: #9ACBD0;
+	border-left: 7px solid #006A71;
+	*/
 }
 
 /* 프로필 사진 */
