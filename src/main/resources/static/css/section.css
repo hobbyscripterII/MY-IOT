@@ -110,16 +110,18 @@ section {
 #control-wrap {
 	box-sizing: border-box;
 	width: 100%;
-	padding: 20px 30px;
+	padding: 20px;
 	display: flex;
 	align-items: center;
-	flex-direction: column;
+	
+	/* flex-direction: column; */
 }
 
 #control-wrap button {
 	box-sizing: border-box;
     font-family: 'Freesentation-9Black';
-    min-width: 500px;
+    width: 300px;
+	min-height: 300px;
     background: #dbdbdb;
     color: #333;
     font-size: 30px;
@@ -127,7 +129,9 @@ section {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 20px auto;
+	margin-right: 20px;
+	
+    /* margin: 20px auto; */
 }
 
 #control-wrap button:hover {
