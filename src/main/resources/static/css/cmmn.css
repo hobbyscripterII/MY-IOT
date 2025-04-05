@@ -8,8 +8,10 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Pretendard-Regular';
-    user-select: none; /* select 금지 */
+    /* font-family: 'Pretendard-Regular'; */
+	
+	/* select 금지 */
+	/* user-select: none; */
 }
 
 ul, li {
@@ -45,6 +47,15 @@ select {
 .btn.small {
 	padding: 10px;
 	font-size: 13px;
+}
+
+.btn.yellow {
+	background-color: yellow;
+	color: #333;
+}
+
+.btn.yellow:hover {
+	background-color: #ffe143;
 }
 
 /* 테이블 */

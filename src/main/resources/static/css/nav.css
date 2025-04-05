@@ -1,8 +1,8 @@
 nav {
     /* width: 17%; */
-    height: auto;
+    height: 40px;
     background: #fff;
-    border-right: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
 }
 
 nav ul li, nav li a {
@@ -15,7 +15,8 @@ nav ul li {
 }
 
 .navbar-wrap {
-    padding: 20px 10px;
+    display: flex;
+	justify-content: space-evenly;
 }
 
 .toggle-wrap {
@@ -49,27 +50,17 @@ nav ul li {
 }
 
 .sub-nav {
-    padding: 15px 20px;
-    border-left: 7px solid transparent;
+	margin: auto;
+    line-height: 40px;
 	cursor: pointer;
 }
 
 .sub-nav:hover {
-	text-decoration: underline;
-	
-	/*
-	background-color: #9ACBD0;
-	border-left: 7px solid #006A71;
-	*/
+	font-weight: bold;
 }
 
 .active {
-	text-decoration: underline;
-
-	/*
-	background-color: #9ACBD0;
-	border-left: 7px solid #006A71;
-	*/
+	font-weight: bold;
 }
 
 /* 프로필 사진 */

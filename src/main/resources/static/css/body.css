@@ -1,5 +1,5 @@
 body {
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     box-sizing: border-box;
     animation: fadeIn 0.8s ease-out;
