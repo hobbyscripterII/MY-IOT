@@ -1,8 +1,13 @@
 $(document).ready(function() {
-	const toggle = $('#toggle');
+	const toggle     = $('#toggle');
+	let toggleTextEl = $('.toggle-wrap p');
 	
 	changeNavActive();  // 클릭 메뉴 강조 효과
 	subNavClickEvent(); // sub-nav 클릭 시 a 태그 트리거
+	
+	// 토글 기본 세팅
+	toggleTextEl.css('color', 'red');
+	toggleTextEl.html('토글 활성화');
 	
 	// 토글
 	toggle.click(function() {
@@ -10,8 +15,12 @@ $(document).ready(function() {
 		
 		if (navbar.is(':visible')) {
 			toggle.attr('src', '/img/img-btn-toggle-2.png');
+			toggleTextEl.css('color', 'darkgray');
+			toggleTextEl.html('토글 비활성화');
 		} else {
 			toggle.attr('src', '/img/img-btn-toggle-1.png');
+			toggleTextEl.css('color', 'red');
+			toggleTextEl.html('토글 활성화');
 		}
 
 	    navbar.toggle();

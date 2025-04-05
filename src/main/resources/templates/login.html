@@ -2,8 +2,11 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{fragments/layout-login}" layout:fragment="body">
 <style>
 	body {
+		background-color: #333;		
+		/*
 		background: url('/img/img-background.jpg') no-repeat center center fixed;
 	    background-size: cover;
+		*/
 	    margin: 0;
 	    height: 100vh;
 	}
@@ -12,7 +15,7 @@
 <body>
     <section>
 		<div class="login-form-wrap">
-			<!-- <h1>아두이노 통신 테스트 프로젝트</h1> -->
+			<h1>Arduino Admin Page</h1>
 			
 			<form id="login-form">
 				<input type="text" id="id" name="id" placeholder="ID">

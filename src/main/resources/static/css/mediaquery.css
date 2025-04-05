@@ -35,12 +35,16 @@
 	}
 	
 	.navbar-wrap {
+		position: relative;
+		z-index: 999;
 		padding: 0px 10px;
 		border-bottom: 1px solid #dbdbdb;
+		display: block;
+		background-color: #fff;
 	}
 	
 	.sub-nav {
-	    padding: 5px 20px;
+	    /* padding: 5px 20px; */
 	}
 	
 	nav ul li {
@@ -61,7 +65,7 @@
 	}
 	
 	.data-box {
-	    padding: 10px 10px;
+	    padding: 5px;
 	    font-size: 15px;
 		border-radius: 5px;
 	}
