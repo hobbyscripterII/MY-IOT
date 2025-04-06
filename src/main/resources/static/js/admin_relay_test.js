@@ -11,14 +11,12 @@ $(document).ready(() => {
 	client.on('connect', () => {
 		console.log('mqtt 연결 성공');
 	});
+
+	$('#relay-module').change(function() {
+		if($(this).is(':checked')) {
+			client.publish(relayOnTopic, 'ON');
+		} else {
+			client.publish(relayOffTopic, 'OFF');
+		}
+	});
 });
-
-function relayModuleOn() {
-	client.publish(relayOnTopic, 'ON');
-	sweetAlert('알림', '릴레이 모듈 전원을 켭니다.', 'info');
-}
-
-function relayModuleOff() {
-	client.publish(relayOffTopic, 'OFF');
-	sweetAlert('알림', '릴레이 모듈 전원을 끕니다.', 'info');
-}
