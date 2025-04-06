@@ -9,13 +9,12 @@
 		-->
 		
 		<div id="control-wrap">
-			<button id="led" onclick="ledOn()">LED ON</button>
-			<button id="led" onclick="ledOff()">LED OFF</button>
-			<button id="led" onclick="ledBlink()">LED BLINK</button>
+			<button id="led" onclick="relayModuleOn()">RELAY MODULE ON</button>
+			<button id="led" onclick="relayModuleOff()">RELAY MODULE OFF</button>
 		</div>
     </section>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/mqtt@4.3.7/dist/mqtt.min.js"></script>
-<script th:src="@{/js/admin_led_test.js}"></script>
+<script th:src="@{/js/admin_relay_test.js}"></script>
 </html>

@@ -22,15 +22,13 @@ public class AdminController {
 		return "admin/default_sensor_test";
 	}
 	
+	@GetMapping("/relay_test")
+	public String ledTest() {
+		return "admin/relay_test";
+	}
+	
 	@GetMapping("/ip_camera_test")
 	public String ipCameraTest() {
 		return "admin/ip_camera_test";
 	}
-	
-	/*
-	@GetMapping("/led_test")
-	public String ledTest() {
-		return "admin/led_test";
-	}
-	*/
 }
