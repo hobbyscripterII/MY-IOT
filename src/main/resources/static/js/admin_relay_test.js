@@ -1,6 +1,5 @@
 let client;
 let currentTopic    = null;
-const message       = 'MESSAGE';
 const brokerUrl     = 'ws://ljy.myddns.me:8081';
 const relayOnTopic  = '/relay/on';
 const relayOffTopic = '/relay/off';
